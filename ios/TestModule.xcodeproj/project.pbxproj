@@ -40,6 +40,7 @@
 		68E3080C2262781F00B130DF /* Test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 68E3080A2262781F00B130DF /* Test.cpp */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
+		B456A5DD2661818600A9556D /* TestTrampoline.mm in Sources */ = {isa = PBXBuildFile; fileRef = B456A5D726617EC600A9556D /* TestTrampoline.mm */; };
 		ED297163215061F000B7C4FE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED297162215061F000B7C4FE /* JavaScriptCore.framework */; };
 		ED2971652150620600B7C4FE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED2971642150620600B7C4FE /* JavaScriptCore.framework */; };
 /* End PBXBuildFile section */
@@ -351,6 +352,8 @@
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
+		B456A5D726617EC600A9556D /* TestTrampoline.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = TestTrampoline.mm; path = TestModule/TestTrampoline.mm; sourceTree = "<group>"; };
+		B456A5D826617EE500A9556D /* TestTrampoline.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestTrampoline.h; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
@@ -504,6 +507,8 @@
 				68E307DB2262762A00B130DF /* TestBinding.h */,
 				68E3080A2262781F00B130DF /* Test.cpp */,
 				68E3080B2262781F00B130DF /* Test.h */,
+				B456A5D726617EC600A9556D /* TestTrampoline.mm */,
+				B456A5D826617EE500A9556D /* TestTrampoline.h */,
 			);
 			name = TestModule;
 			sourceTree = "<group>";
@@ -1101,7 +1106,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
+			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
 		};
 		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1135,6 +1140,7 @@
 				68E307DC2262762A00B130DF /* TestBinding.cpp in Sources */,
 				68E3080C2262781F00B130DF /* Test.cpp in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				B456A5DD2661818600A9556D /* TestTrampoline.mm in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
